@@ -11,11 +11,31 @@
 
   .product-item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 14px 22px;
     margin-bottom: 12px;
     border-radius: 8px;
-    background-color: #f1f1f1;
-    //box-shadow: $boxShadow;
+    background-color: $colorPrimary;
+    box-shadow: $boxShadow;
+
+    & > .product-details {
+      display: flex;
+      flex-direction: row;
+
+      > img {
+        border-radius: 50%;
+        height: 128px;
+        width: 128px;
+      }
+
+      > div {
+        align-self: center;
+        padding: 1em;
+        color: $colorContrastPrimary;
+        font-size: $fontSizeTitle;
+      }
+    }
+
   }
 }
