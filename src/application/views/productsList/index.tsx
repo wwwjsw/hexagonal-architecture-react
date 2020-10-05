@@ -14,6 +14,6 @@ export const ProductsListView = ({ products }: IProps) => (
             {products.map((product: ProductModel) => <ProductView key={product.id} product={product}/>)}
         </ul>
         : <div className={"products-list empty"}>
-            Vous n'avez pas encore de produits dans votre liste de course
+            Você ainda não tem produtos à serem mostrados
         </div>
 )
