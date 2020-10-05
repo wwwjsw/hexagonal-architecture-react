@@ -6,9 +6,10 @@ interface IProps {
 }
 
 export const ProductView = ({ product }: IProps) => (
-    <li className={"product-item"}>
-        <div className={"product-name"}>{product.name}</div>
-        <div className={"product-description"}>{product.description}</div>
-        <div className={"product-quantity"}>{product.quantity}</div>
-    </li>
+    <a href={`/product/${product.id}`} key={product.id} className={"product-item"}>
+        <div className="product-details">
+            <img src={product.avatar} alt={product.title} />
+            <div>{product.body}</div>
+        </div>
+    </a>
 )
